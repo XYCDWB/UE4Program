@@ -29,18 +29,14 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 
-	void MoveForward(float AxisValue);
-	void MoveRight(float AxisValue);
-	void PitchCamera(float AxisValue);
-	void YawCamera(float AxisValue);
-	void ZoomIn();
-	void ZoomOut();
+
 
 
 protected:
 
 	//这些变量会创建一个 SpringArmComponent，并在末端绑定一个 CameraComponent.
-//弹簧臂是一种绑定摄像机（或其它 组件 ）的简单方式，能让摄像机跟随拍摄对象时平稳自然.
+	//弹簧臂是一种绑定摄像机（或其它 组件 ）的简单方式，能让摄像机跟随拍摄对象时平稳自然.
+
 	UPROPERTY(EditAnywhere)
 		class USpringArmComponent* SpringArmComp;
 
@@ -48,7 +44,7 @@ protected:
 		class UCameraComponent* CameraComp;
 
 	UPROPERTY(EditAnywhere)
-		UStaticMeshComponent* StaticMeshComp;
+		UStaticMeshComponent* staticMeshComp;
 
 
 	FVector2D MovementInput;
@@ -56,7 +52,12 @@ protected:
 	float ZoomFactor;
 	bool bZoomingIn;
 
-
+	void MoveForward(float AxisValue);
+	void MoveRight(float AxisValue);
+	void PitchCamera(float AxisValue);
+	void YawCamera(float AxisValue);
+	void ZoomIn();
+	void ZoomOut();
 
 
 };
