@@ -13,5 +13,7 @@ UCLASS()
 class UE4CPLUSPLUS_API AUE4CPlusPlusGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
+
+	virtual void StartPlay() override;
 	
 };
