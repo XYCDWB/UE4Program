@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "Blueprint/UserWidget.h"
 #include "UE4CPlusPlusGameModeBase.generated.h"
 
 /**
@@ -15,5 +16,4 @@ class UE4CPLUSPLUS_API AUE4CPlusPlusGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 
 	virtual void StartPlay() override;
-	
 };
